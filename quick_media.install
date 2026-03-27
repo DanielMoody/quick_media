@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\filter\Entity\FilterFormat;
+
+/**
+ * Implements hook_install().
+ */
+function quick_media_install() {
+  $formats = [
+    'basic_html',
+    'full_html',
+  ];
+
+  foreach ($formats as $format_id) {
+    $format = FilterFormat::load($format_id);
+
+    if (!$format) {
+      continue;
+    }
+
+    $filters = $format->get('filters');
+
+    // Enable only if not already present.
+    if (!isset($filters['quick_media_token_filter'])) {
+      $filters['quick_media_token_filter'] = [
+        'id' => 'quick_media_token_filter',
+        'provider' => 'quick_media',
+        'status' => TRUE,
+        'weight' => 0,
+        'settings' => [],
+      ];
+
+      $format->set('filters', $filters);
+      $format->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function quick_media_uninstall() {
+
+  // Remove the View
+  \Drupal::configFactory()
+    ->getEditable('views.view.quick_media_tokens')
+    ->delete();
+}
