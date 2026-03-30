@@ -5,13 +5,16 @@ Quick Media is a lightweight Drupal module that allows editors to embed media en
 Instead of navigating the media browser or manually inserting embeds, editors can use:
 
 
-[media:123]
+`[media:123]`
 
 
 …and have it automatically rendered as an `<img>` tag.
 
 ---
+## Installation
+Install via Composer:
 
+`composer require cms-alchemy/quick-media`
 ## Features
 
 - Token-based media embedding: `[media:ID]`
