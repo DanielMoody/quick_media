@@ -1,0 +1,20 @@
+json
+{
+  "name": "cms_alchemy/quick_media",
+  "description": "Token-based media embedding for Drupal ([media:ID] → <img>).",
+  "type": "drupal-module",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drupal\\quick_media\\": "src/"
+    }
+  },
+  "extra": {
+    "drupal": {
+      "type": "module"
+    }
+  }
+}
