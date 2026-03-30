@@ -9,7 +9,7 @@ function quick_media_form_node_form_alter(&$form, FormStateInterface $form_state
     return;
   }
 
-  // Attach JS library HERE
+ 
   $form['#attached']['library'][] = 'quick_media/quick_media_picker';
 
   $form['quick_media_picker'] = [
@@ -41,7 +41,7 @@ function quick_media_render_picker() {
 
   $output = '<div style="display:flex; gap:10px; overflow-x:auto;">';
 
-  // Load image style once (not inside loop)
+  // Load image style once
   $style = \Drupal::entityTypeManager()
                   ->getStorage('image_style')
                   ->load('medium');
