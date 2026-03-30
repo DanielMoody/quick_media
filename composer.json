@@ -16,8 +16,5 @@
     "drupal": {
       "type": "module"
     }
-  },
-  "replace": {
-    "cms_alchemy/quick_media": "*"
   }
 }
