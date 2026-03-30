@@ -1,4 +1,3 @@
-json
 {
   "name": "cms_alchemy/quick_media",
   "description": "Token-based media embedding for Drupal ([media:ID] → <img>).",
