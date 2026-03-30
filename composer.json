@@ -1,5 +1,5 @@
 {
-  "name": "cms_alchemy/quick_media",
+  "name": "cms-alchemy/quick-media",
   "description": "Token-based media embedding for Drupal ([media:ID] → <img>).",
   "type": "drupal-module",
   "license": "GPL-3.0-or-later",
@@ -16,5 +16,8 @@
     "drupal": {
       "type": "module"
     }
+  },
+  "replace": {
+    "cms_alchemy/quick_media": "*"
   }
 }
