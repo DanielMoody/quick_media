@@ -13,8 +13,10 @@ Instead of navigating the media browser or manually inserting embeds, editors ca
 ---
 ## Installation
 Install via Composer:
-
-`composer require cms-alchemy/quick-media`
+```
+composer require cms-alchemy/quick-media
+drush en quick_media
+```
 ## Features
 
 - Token-based media embedding: `[media:ID]`
